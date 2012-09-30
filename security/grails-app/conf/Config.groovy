@@ -102,6 +102,13 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+	 error stdout: "StackTrace"
+		root {
+        if(Environment.current == Environment.PRODUCTION) {
+            info 'stdout'
+            additivity = true
+        }
+    }
 }
 
 // Added by the Spring Security Core plugin:
