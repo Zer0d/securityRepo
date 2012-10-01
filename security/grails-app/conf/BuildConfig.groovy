@@ -49,7 +49,9 @@ grails.project.dependency.resolution = {
         //runtime ":zipped-resources:1.0"
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.4"
-		test ":code-coverage:1.2.5"
+		test (":code-coverage:1.2.5"){
+            excludes: "log4j"
+        }
         build ":tomcat:$grailsVersion"
         runtime ":database-migration:1.1"
         compile ':cache:1.0.0'
