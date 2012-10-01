@@ -63,7 +63,6 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 
 coverage {
-	nopost = true
 	xml = true
 }
 
