@@ -90,6 +90,11 @@ log4j = {
                 layout: pattern(conversionPattern:'%d{ISO8601}|[%t]|%-5p |%c{1}| %x | %m%n'),
                 fileName:"${logDir}/stacktrace.log")
     }
+	else{
+		  appenders {
+		   console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+		}
+	}
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
